@@ -54,11 +54,11 @@ def keep_k(xs: list[int], k: int) -> list[int]:
     for number in xs:
         if number not in seen_:
             seen_[number] = 1
+            final_result.append(number)
         else:
             if seen_[number] < k:
                 seen_[number] += 1
                 final_result.append(number)
-            else:
-                continue
+            else: continue
     return final_result
             
