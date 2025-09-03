@@ -16,4 +16,9 @@ Pseudocode
 - Return the list
 '''
 def deduplicate_keep_order(xs: list[int]) -> list[int]:
-    
+    tracker_set = set()
+    final_result = []
+    for number in xs:
+        if number not in tracker_set:
+            final_result.append(number)
+    return final_result
